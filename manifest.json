@@ -1,9 +1,9 @@
 {
   "Name": "MobileSafeQuickSave_API",
-  "Author": "ChatGPT",
+  "Author": "NoobHema",
   "Version": "0.2.0-android",
   "Description": "모바일용 Quick Save API 통합 보수적 중간저장(F5/콘솔). FTM/SpaceCore 안전장치 포함",
-  "UniqueID": "chatgpt.MobileSafeQuickSave_API",
+  "UniqueID": "NoobHema.MobileSafeQuickSave_API",
   "EntryDll": "MobileSafeQuickSave_API.dll",
   "MinimumApiVersion": "4.2.1",
   "UpdateKeys": [],
