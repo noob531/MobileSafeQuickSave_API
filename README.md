@@ -1,27 +1,52 @@
-# MobileSafeQuickSave_API (Android/SMAPI 4.2.1)
+# MobileSafeQuickSave_API
 
-모바일용 Quick Save API 통합 보수적 중간저장 모드입니다. 모든 코드는 ChatGPT를 통해 작성되었습니다.
+**MobileSafeQuickSave_API**는 Stardew Valley에서 안전하게 중간저장(Quick Save)을 지원하는 모드입니다.  
 
-## 주요 특징
-- **F5 키, /msqsave 콘솔 명령 지원**
-- **/msqsave!** → 강제 저장(권장하지 않음)
-- **FTM/SpaceCore 상태 감지** → 바쁠 시 저장 거부
-- **Quick Save API 연동 시점만 저장 허용, 안전성 최대화**
+- F5 키 입력 또는 콘솔 명령으로 중간 저장 실행  
+- `spacechase0.SpaceCore` 설치 시 더 보수적인 저장 안전성 검사 적용  
+- FTM, RSV 같은 대규모 확장 모드 사용 시에도 세이브 손상 방지  
 
-## 설치 및 사용법
+## 설치 방법
+1. [SMAPI](https://smapi.io) 설치  
+2. 이 모드의 최신 릴리스 다운로드  
+3. 압축을 풀고 `MobileSafeQuickSave_API` 폴더를 `Mods` 폴더에 넣기  
 
-1. **빌드된 DLL과 manifest.json을 `Mods/MobileSafeQuickSave_API` 폴더에 넣으세요.**
-2. 게임 내에서 F5 키 또는 콘솔 명령어 `/msqsave`, `/msqsave!` 사용 가능.
-3. 세이브 전 항상 백업 권장.
+## 사용법
+- **F5 키** → 중간 저장 시도  
+- **콘솔 명령어**
+  - `msqsave` → 안전 조건 검사 후 중간 저장  
+  - `msqsave!` → 강제 저장 (비추천)  
 
-## 주의사항
-- **DLL 빌드 필요**: 소스 코드를 .NET Framework 4.5.2(net452)로 빌드해야 합니다.
-- **세이브 백업 필수**: 비정상 저장 또는 충돌 시 세이브 손상 위험이 있으므로, 항상 세이브 파일을 백업하세요.
-- **FTM/SpaceCore와의 호환**: 해당 모드들이 비정상적으로 동작 중일 때는 저장이 거부됩니다.
-- **Quick Save API 연동**: API가 없거나 동작 불가 시 저장을 자동으로 거부합니다.
+## 설정 (config.json)
+```json
+{
+  "ExtraDelayMs": 750,
+  "VerboseLogging": true
+}
 
-## 개발/기여
-- 문의/기여는 GitHub Issue 또는 PR로 요청해 주세요.
-- SMAPI 모바일(4.2.1) 환경을 기준으로 설계되었습니다.
----
-**이 모드는 공식 SMAPI/스타듀밸리 모바일 버전의 동작을 100% 보장하지 않습니다. 모든 저장은 본인 책임 하에 진행해 주세요.**
+ExtraDelayMs: 저장 전 대기 시간 (ms)
+
+VerboseLogging: true일 경우 상세 로그 출력
+
+
+주의사항
+
+이벤트/축제/하루 전환 중에는 저장 차단
+
+강제 저장(msqsave!)은 세이브 손상 위험 존재
+
+SpaceCore/FTM이 없어도 동작하며, 설치 시 추가 안전 기능이 활성화됨
+
+
+개발자 참고
+
+Target framework: .NET Framework 4.5.2
+
+Entry point: ModEntry.cs
+
+UniqueID: noob531.MobileSafeQuickSave_API
+
+
+라이선스
+
+MIT License
