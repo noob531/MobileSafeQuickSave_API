@@ -24,6 +24,7 @@
   "VerboseLogging": true
 }
 
+
 ExtraDelayMs: 저장 전 대기 시간 (ms)
 
 VerboseLogging: true일 경우 상세 로그 출력
