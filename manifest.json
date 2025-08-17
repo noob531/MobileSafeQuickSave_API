@@ -1,9 +1,9 @@
 {
   "Name": "MobileSafeQuickSave_API",
-  "Author": "YourName",
+  "Author": "noob531",
   "Version": "0.2.0-android",
   "Description": "모바일에서도 안전 시점에서만 퀵세이브(F5/콘솔). SpaceCore 설치 시 더 보수적으로 동작",
-  "UniqueID": "yourname.MobileSafeQuickSave_API",
+  "UniqueID": "noob531.MobileSafeQuickSave_API",
   "EntryDll": "MobileSafeQuickSave_API.dll",
   "MinimumApiVersion": "4.2.1",
   "UpdateKeys": [],
