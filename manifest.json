@@ -1,9 +1,9 @@
 {
   "Name": "MobileSafeQuickSave_API",
-  "Author": "NoobHema",
+  "Author": "YourName",
   "Version": "0.2.0-android",
-  "Description": "모바일용 Quick Save API 통합 보수적 중간저장(F5/콘솔). FTM/SpaceCore 안전장치 포함",
-  "UniqueID": "NoobHema.MobileSafeQuickSave_API",
+  "Description": "모바일에서도 안전 시점에서만 퀵세이브(F5/콘솔). SpaceCore 설치 시 더 보수적으로 동작",
+  "UniqueID": "yourname.MobileSafeQuickSave_API",
   "EntryDll": "MobileSafeQuickSave_API.dll",
   "MinimumApiVersion": "4.2.1",
   "UpdateKeys": [],
